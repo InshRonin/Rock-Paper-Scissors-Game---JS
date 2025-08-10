@@ -1,0 +1,161 @@
+:root{
+--bg-dark: hsl(228 79% 2%);
+--bg: hsl(222 55% 5%);
+--bg-light: hsl(220 35% 10%);
+--text: hsl(220 100% 98%);
+--primary: hsl(220 78% 76%);
+--highlight: hsl(220 20% 42%);
+--danger: hsl(9 26% 64%);
+}
+
+.dark-mode {
+--bg-dark: hsl(220 59% 91%);
+--bg: hsl(220 100% 97%);
+--bg-light: hsl(220 100% 100%);
+--text: hsl(226 85% 7%);
+--primary: hsl(221 49% 33%);
+--highlight: hsl(220 100% 100%);
+--danger: hsl(9 21% 41%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background: var(--bg-light);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    max-width: 60%;
+    margin: 10% auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.692);
+    overflow: hidden;
+}
+
+.container{
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    padding: 0;
+    margin: 0;
+    font-size: 0.7rem;
+    background: var(--bg);
+    width: 100%;
+    padding: 15px;
+    color: var(--text);
+    text-align: center;
+}
+
+button {
+    text-align: center;
+    margin: 10px;
+    border: none;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    background: var(--primary);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--highlight) ;
+    transition: all 0.8s ease;
+}
+
+.emoji {
+    background-image: url('rock.svg');
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.emoji1 {
+    background-image: url('./assets/hand-back-fist-solid-full.svg');
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.emoji2 {
+    background-image: url('./assets/hand-dots-solid-full.svg');
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.emoji3 {
+    background-image: url('./assets/hand-peace-solid-full.svg');
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+
+.result {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    background:var(--bg);
+}
+
+.result h2 {
+    color: var(--text);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.scoreDisplay{
+    color:var(--text);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+    background: var(--bg);
+    font-weight: 500;
+}
+
+
+.greenText, #playerScoreDisplay{
+    color: rgb(39, 255, 75);
+}
+.redText, #computerScoreDisplay{
+    color: var(--danger);
+}
+
+#Reset{
+    color: var(--bg-dark);
+    width: 80px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: var(--danger);
+    cursor: pointer;
+}
+
+#Reset:hover{
+    background: rgba(210, 1, 3, 0.9);
+    transition: all 0.8s ease;
+    color: var(--text);
+}
