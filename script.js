@@ -1,3 +1,15 @@
+const themeButton = document.getElementById("theme");
+themeButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+        document.querySelector(".thm").style.backgroundImage = "url('./assets/moon-solid-full.svg')";
+    }
+    else{
+        document.querySelector(".thm").style.backgroundImage = "url('./assets/sun-solid-full.svg')";
+    }
+});
+
+
 const choices = ["rock", "paper", "scissors"];
 const userChoice = document.getElementById("userChoice")
 const computerChoice = document.getElementById("computerChoice");
